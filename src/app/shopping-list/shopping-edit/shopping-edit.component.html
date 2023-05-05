@@ -13,8 +13,8 @@
             </div>
             <div class="row">
                 <div class="col-xs-12">
-                    <button class="btn btn-success" type="button" (click)="AddToShoppingList(nameInput, amountInput)">Add Item</button>
-                    <button class="btn btn-danger"  type="button">Delete</button>
+                    <button class="btn btn-success" type="button" (click)="addToShoppingList(nameInput, amountInput)">Add Item</button>
+                    <button class="btn btn-danger"  type="button" (click)="deleteFromShoppingList(nameInput, amountInput)">Delete</button>
                     <button class="btn btn-default" type="button" (click)="nameInput.value='';amountInput.value='';">Clear</button>
                 </div>
             </div>
