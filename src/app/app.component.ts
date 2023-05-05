@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ShoppingReceipe';
+  selectedMenu = 'RecipeMenu';
+  onselectedMenu(selectedMen: string) {
+    this.selectedMenu = selectedMen;
+  }
 }
