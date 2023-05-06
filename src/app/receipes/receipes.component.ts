@@ -5,8 +5,8 @@ import { RecipeService } from './recipe.service';
 @Component({
 	selector: 'app-receipes',
 	templateUrl: './receipes.component.html',
-	styleUrls: ['./receipes.component.css'],
-	providers: [RecipeService]
+	styleUrls: ['./receipes.component.css']
+	//providers: [RecipeService]
 })
 export class ReceipesComponent {
 	selectedRecipe: Recipe;
@@ -16,7 +16,6 @@ export class ReceipesComponent {
 	}
 
 	ngOnInit(): void {
-		//this.selectedRecipe = this.recipeService.getRecipes()[0];
 		this.recipeService.SelectedRecipeChanged.subscribe((recipe: Recipe) => {
 			this.selectedRecipe = recipe;
 		});

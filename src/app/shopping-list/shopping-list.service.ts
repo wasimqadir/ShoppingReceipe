@@ -7,13 +7,18 @@ export class ShoppingListService {
     newIngredient = new EventEmitter<Ingredient>();
 
     constructor() {
-        this.ingredients.push(new Ingredient("Apples", 1));
-        this.ingredients.push(new Ingredient("Tomatoes", 2));
-        this.ingredients.push(new Ingredient("Bananas", 3));
+        // this.ingredients.push(new Ingredient("Apples", 1));
+        // this.ingredients.push(new Ingredient("Tomatoes", 2));
+        // this.ingredients.push(new Ingredient("Bananas", 3));
     }
 
     getAllIngredients() {
         return this.ingredients.slice();
+    }
+
+    addNewIngredients(newItem: Ingredient[]) {
+        this.ingredients.push(...newItem);
+        this.newIngredient.emit(...newItem.slice());
     }
 
     addNewIngredient(newItem: Ingredient) {
